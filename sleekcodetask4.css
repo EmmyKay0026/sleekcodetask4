@@ -1,0 +1,215 @@
+:root{
+    --red:rgb(211, 0, 2);
+}
+*{
+    /* border: 1px solid black; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.brd{
+    border: 1px solid black;
+}
+.d-flex{
+    display: flex;
+}
+nav{
+    width: 58vw;
+    height: 8vh;
+    transform: translate(20vw, 80vh);
+    position: fixed;
+    color: white;
+}
+.nav-new{
+    transform: translate(20vw, 85vh);
+}
+nav div span{
+    background-color: var(--red);
+    margin: 0;
+    text-align: center;
+    padding: 4px 13px;
+    border-radius: 5px;
+    position: relative;
+    left:48%;  
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background-color: var(--red);
+    margin: 0;
+    height: 90%;
+    padding:1% 5%;
+    border-radius: 50px;
+}
+nav ul li {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 1% 3%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+nav ul li:hover {
+    cursor: pointer;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+nav ul li div:nth-child(1){
+    margin-right: 7px;
+}
+.main-page{
+    display: grid;
+    height: 100vh;
+    grid-template-columns:40% 57%;
+    max-width: 100vw;
+}
+.main-page .first-half img{
+    width: 100%;
+    height: 100vh;
+}
+.main-page .second-half{
+    max-height: 68.7vh;
+}
+.main-page .second-half .search-part{
+    width: 70%;    
+    margin-left: 30px;
+}
+.main-page .second-half .search-part .menu-svg{
+    display: none;
+}
+.main-page .second-half .search-part .right-arrow{
+    width: 20px;
+    height: 12px;
+    padding: 2% 1%;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main-page .second-half .search-part h1{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.main-page .second-half .search-part p{
+    font-family: Roboto;
+    font-size: 0.7rem;
+}
+.find_init{
+    width: 75%;
+    height: 45px;
+    border-radius: 50px ;
+    border: black 1px solid;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+.main-page .second-half .bottom-half{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 98%;
+    height: 100%;
+    margin-top: 30px;
+    background-color: rgba(225, 221, 214, 0.372);
+    padding: 2% 4%;
+}
+.main-page .second-half .bottom-half .bottom-right-half{
+    box-sizing: content-box;
+}
+.main-page .second-half .bottom-half .bottom-left-half{
+    height: 85% !important;
+    overflow-y: scroll;
+    padding-right: 5%;
+}
+.main-page .second-half .bottom-half .bottom-left-half::-webkit-scrollbar{
+    background-color: rgba(218, 214, 214, 0.51);
+    border-radius: 20px;
+    width: 8px;
+}
+.main-page .second-half .bottom-half .bottom-left-half::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 20px;
+}
+.main-page .second-half .bottom-half .bottom-left-half::-webkit-scrollbar-thumb:hover{
+    background-color: var(--red);
+}
+.bottom-half .bottom-left-half .each-list{
+    display: grid;
+    grid-template-columns: 20% 68%;
+    gap: 1%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 4% 3%;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.bottom-half .bottom-left-half .each-list:hover{
+    background-color: var(--red);
+
+}
+.bottom-half .bottom-left-half .each-list .image-container img{
+    width: 100%;
+}
+.bottom-half .bottom-left-half div div h4, .bottom-half .bottom-left-half div div  p{
+    padding: 0;
+    margin: 0%;
+    line-height: 32px;
+}
+.bottom-half .bottom-right-half{
+    padding: 8% 7%;
+}
+.main-page .second-half .bottom-half .bottom-right-half-mobile{
+    display: none;
+}
+
+.bottom-half .bottom-right-half .image-container2{
+    width: 30%;
+}
+.bottom-half .bottom-right-half .image-container2 img{
+    width: 100%;
+}
+.bottom-half .bottom-right-half p span{
+    font-weight: bold;
+}
+/* DESKTOP VIEW */
+@media screen and (max-width: 768px) {
+    nav{
+    transform: translate(10vw, 88vh);
+    width: 75vw;
+    }
+    nav ul{
+        overflow-x: scroll;
+    }
+    nav ul::-webkit-scrollbar{
+        width: 3px;
+    }
+    .main-page{
+        display: block;
+        padding-top: 30px;
+    }
+    .main-page .first-half{
+        display: none;
+    }
+    .menu-svg{
+    display: block !important;
+    }
+    .right-arrow{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .main-page .second-half .bottom-half .bottom-right-half{
+        display: none;
+    }
+    .main-page .second-half .bottom-half .bottom-right-half-mobile{
+        width: 98vw !important;
+        height: 120vh !important;
+        position: absolute;
+        top: 0;
+        display: block !important;
+        background-color: rgb(225, 221, 214);
+    }
+}
