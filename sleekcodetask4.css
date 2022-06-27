@@ -201,6 +201,9 @@ nav ul li div:nth-child(1){
     }
 }
 @media screen and (max-width: 400px) {
+    .main-page .second-half .bottom-half .bottom-left-half{
+        width: 97vw;
+    }
     .main-page .second-half .bottom-half .bottom-right-half{
         display: none;
     }
